@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.background
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -23,7 +23,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -48,25 +51,26 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Inicio(name: String, modifier: Modifier = Modifier) {
 
-var texto = "Murilo"
+    var texto = "Murilo"
     var teste by remember {
         mutableStateOf(1)
+
     }
-    var escolha = when(teste){
-        1 -> "Ação"
+    var escolha = when (teste) {
+        1 -> "Ação";
         2 -> "Aventura"
         3 -> "Comédia"
-        4 -> "Drama"
-        5 -> "Terror"
-        6 -> "Ficção Científica"
-        7 -> "Fantasia"
-        8 -> "Romance"
-        9 -> "Mistério"
-        10 -> "Documentário"
-        11 -> "Musical"
-        else -> "Animação"
-
-
+        4 -> "Terror"
+        5 -> "Romance"
+        else -> "Suspense"
+    }
+    val fotos = when (teste) {
+        1 -> R.drawable.acao
+        2 -> R.drawable.aventura
+        3 -> R.drawable.comedia
+        4 -> R.drawable.terror
+        5 -> R.drawable.romance
+        else -> R.drawable.suspense
     }
 
 
@@ -74,12 +78,16 @@ var texto = "Murilo"
     Column(
 
         modifier = Modifier
-            .background(color = Color(0xFF000000))
+            .fillMaxSize()
+            .paint(
+                painter = painterResource(R.drawable.testebackground),
+                contentScale = ContentScale.Crop
+            )
             .padding(10.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
 
-    ) {
+        ) {
         Text(
             text = "O filme de hoje é:",
             fontSize = 45.sp,
@@ -100,9 +108,23 @@ var texto = "Murilo"
                     .align(Alignment.CenterHorizontally)
             )
         }
+
+
+
+          Image(
+                painter = painterResource(fotos),
+                contentDescription = "Horror",
+                modifier = Modifier
+                    .width(400.dp)
+                    .align(Alignment.CenterHorizontally)
+
+
+            )
+
+
         Button(
             onClick = {
-                teste = (1..12).random()
+                teste = (1..6).random()
             },
             modifier = Modifier
                 .padding(20.dp)
@@ -115,8 +137,8 @@ var texto = "Murilo"
                 fontSize = 30.sp
             )
         }
-    }
-}
+    }}
+
 
 @Preview(showBackground = true)
 @Composable
@@ -125,6 +147,7 @@ fun GreetingPreview() {
         Surface(modifier = Modifier.fillMaxSize()) {
             Inicio(
                 name = "Android"
-            ) // Chama a função sem parâmetros
+            )
         }
-    }}
+    }
+}
