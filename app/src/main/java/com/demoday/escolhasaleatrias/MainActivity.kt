@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -115,7 +116,7 @@ fun Inicio(name: String, modifier: Modifier = Modifier) {
                 painter = painterResource(fotos),
                 contentDescription = "Horror",
                 modifier = Modifier
-                    .width(400.dp)
+                    .size(300.dp)
                     .align(Alignment.CenterHorizontally)
 
 
