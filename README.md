@@ -1,50 +1,33 @@
+
 # Escolhas Aleatórias
 
-Este é um aplicativo Android desenvolvido em Kotlin utilizando Jetpack Compose. Ele sorteia aleatoriamente um gênero de filme e exibe uma imagem correspondente ao gênero selecionado, proporcionando uma experiência divertida para os usuários que desejam escolher um filme para assistir.
+Este é um aplicativo Android que sorteia um gênero de filme aleatório e exibe uma imagem correspondente ao gênero selecionado. O usuário pode clicar em um botão para gerar um novo sorteio.
 
 ## Funcionalidades
 
-- **Sorteio Aleatório de Gênero:** Ao clicar no botão "Sortear", o aplicativo escolhe aleatoriamente um dos gêneros: Ação, Aventura, Comédia, Terror, Romance ou Suspense.
-- **Imagem do Gênero Selecionado:** Cada gênero possui uma imagem associada, exibida na interface ao ser sorteado.
-- **Interface Personalizada:** O aplicativo utiliza um background personalizado e um layout centralizado para uma experiência de usuário agradável.
+- **Sortear Gênero de Filme**: O aplicativo apresenta um gênero de filme aleatório entre Ação, Aventura, Comédia, Terror, Romance e Suspense.
+- **Exibição de Imagem**: Para cada gênero sorteado, uma imagem correspondente ao gênero é exibida.
+- **Botão de Sorteio**: Ao clicar no botão "Sortear", o aplicativo sorteia um novo gênero de filme e exibe o resultado.
 
 ## Tecnologias Utilizadas
 
-- **Kotlin**
-- **Jetpack Compose:** Framework de UI declarativa para criar interfaces de usuário responsivas e interativas.
-- **Android Studio:** IDE usada para desenvolvimento.
+- **Kotlin**: Linguagem de programação utilizada para o desenvolvimento.
+- **Jetpack Compose**: Framework de UI utilizado para criar a interface do usuário.
+- **Material 3**: Componentes de UI da biblioteca Material Design 3 para garantir uma aparência moderna e consistente.
+- **Android Studio**: Ambiente de desenvolvimento utilizado para a criação do aplicativo.
 
 ## Estrutura do Código
 
-### Arquivo Principal: `MainActivity.kt`
+### MainActivity
+A `MainActivity` é a tela principal do aplicativo e contém a lógica para exibir o gênero sorteado e a imagem correspondente.
 
-O arquivo `MainActivity.kt` define a estrutura principal do aplicativo e utiliza o tema `EscolhasAleatóriasTheme`. A função `Inicio` é o ponto central da interface de usuário, contendo:
+- **Inicio Composable**: Função composable que exibe o título, o gênero sorteado, a imagem correspondente e o botão para gerar um novo sorteio.
+- **Estado de Sorteio**: O estado `teste` armazena o número do sorteio (de 1 a 6) e define o gênero e a imagem a ser exibida com base nesse número.
 
-- **Variáveis:**
-  - `teste`: Mantém o estado do gênero sorteado.
-  - `escolha`: Texto que exibe o gênero atual sorteado.
-  - `fotos`: Armazena o recurso da imagem correspondente ao gênero sorteado.
+### Layout
+- **Column**: Layout de coluna para organizar os elementos verticalmente.
+- **Card**: Um cartão com o nome do gênero sorteado.
+- **Image**: Exibe a imagem correspondente ao gênero sorteado.
+- **Button**: Um botão para gerar um novo sorteio de gênero.
 
-- **Elementos de UI:**
-  - `Text`: Exibe o título e o gênero sorteado.
-  - `Image`: Mostra a imagem correspondente ao gênero atual.
-  - `Button`: Botão "Sortear" que altera o estado do gênero ao ser pressionado.
 
-## Como Executar o Projeto
-
-1. Clone ou faça o download do repositório.
-2. Abra o projeto no Android Studio.
-3. Conecte um dispositivo Android ou inicie um emulador.
-4. Compile e execute o aplicativo para testar as funcionalidades.
-
-## Pré-visualização
-
-O aplicativo apresenta uma interface onde o usuário pode ver o gênero sorteado e a imagem correspondente ao gênero. Abaixo está uma pré-visualização básica:
-
-> **"O filme de hoje é: [Gênero]"**
-
-A imagem do gênero sorteado é exibida abaixo da mensagem.
-
-## Licença
-
-Este projeto é de código aberto e pode ser modificado e distribuído conforme necessário. Consulte o arquivo de licença (se disponível) para mais informações.
