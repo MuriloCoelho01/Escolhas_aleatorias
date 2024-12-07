@@ -1,3 +1,4 @@
+<img src="images/escolha_mockup.png" alt="Mockup do projeto">
 
 # Escolhas Aleatórias
 
@@ -8,7 +9,9 @@ Este é um aplicativo Android que sorteia um gênero de filme aleatório e exibe
 - **Sortear Gênero de Filme**: O aplicativo apresenta um gênero de filme aleatório entre Ação, Aventura, Comédia, Terror, Romance e Suspense.
 - **Exibição de Imagem**: Para cada gênero sorteado, uma imagem correspondente ao gênero é exibida.
 - **Botão de Sorteio**: Ao clicar no botão "Sortear", o aplicativo sorteia um novo gênero de filme e exibe o resultado.
-
+---
+<img src="images/escolha_mockup.png" alt="Mockup do projeto">
+---
 ## Tecnologias Utilizadas
 
 - **Kotlin**: Linguagem de programação utilizada para o desenvolvimento.
