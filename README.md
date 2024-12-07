@@ -1,6 +1,5 @@
-<img src="images/escolha_mockup.png" alt="Mockup do projeto">
 
-# Escolhas Aleatórias
+# Escolhas Aleatórias 🎥🎞️
 
 Este é um aplicativo Android que sorteia um gênero de filme aleatório e exibe uma imagem correspondente ao gênero selecionado. O usuário pode clicar em um botão para gerar um novo sorteio.
 
@@ -10,7 +9,8 @@ Este é um aplicativo Android que sorteia um gênero de filme aleatório e exibe
 - **Exibição de Imagem**: Para cada gênero sorteado, uma imagem correspondente ao gênero é exibida.
 - **Botão de Sorteio**: Ao clicar no botão "Sortear", o aplicativo sorteia um novo gênero de filme e exibe o resultado.
 ---
-<img src="images/escolha_mockup.png" alt="Mockup do projeto">
+<img src="escolha_mockup.png" alt="Mockup do projeto">
+
 ---
 ## Tecnologias Utilizadas
 
